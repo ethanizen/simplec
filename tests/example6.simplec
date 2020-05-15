@@ -1,0 +1,34 @@
+int isodd(int x, int y, int z) {
+	int comp;
+	if (x % z == y) {
+		comp =  1;
+	} else {
+		comp = 0;
+	}
+	return comp;
+}
+
+int iseven(int x, int y, int z) {
+	int comp;
+	if (x % z != y) {
+		comp = 1;
+	} else {
+		comp = isodd(x, y, z);
+	}
+	return comp;
+}
+
+int main() {
+	int x;
+	int y;
+	int z;
+	x = 0;
+	y = 1;
+	z = 2;
+	while (10 > x) {
+		print isodd(x, y, z);
+		print iseven(x, y, z);
+		x = x + y;
+	}
+	return 0;
+}
